@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	    BoxContainer container = new BoxContainer();
+	    BoxContainer container = new BoxContainer(100);
 	    Shape cube = new Shape();
         Shape sphere = new Shape();
 
@@ -12,7 +12,6 @@ public class Main {
 
         container.addShape(cube);
         container.addShape(sphere);
-
     }
 }
 

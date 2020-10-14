@@ -1,7 +1,12 @@
 package com.company;
 
 public class BoxContainer{
-    private int containerVolume = 100;
+
+    private int containerVolume;
+
+    public BoxContainer(int containerVolume) {
+        this.containerVolume = containerVolume;
+    }
 
     public int getContainerVolume() {
         return containerVolume;
