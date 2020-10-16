@@ -5,14 +5,26 @@
 
 }
 
-header{
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header{
     width: 100%;
     height: 60px;
     border-bottom: 1px solid lightgray;
     display: flex;
     align-items: center;
+    background-color: white;
     padding: 0 50px;
     font-family: 'Staatliches', cursive;
+    
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 #titleLogo{
@@ -22,12 +34,6 @@ header{
 
 #titleLogo > p3{
     color: gray;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #photoBlock{
