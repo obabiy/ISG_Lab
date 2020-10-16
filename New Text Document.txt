@@ -1,0 +1,3 @@
+* Shape has not a private Volume
+* Box has`n a private Volume
+* Box`s volume isn`t changed with iterations
