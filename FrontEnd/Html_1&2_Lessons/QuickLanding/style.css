@@ -196,13 +196,9 @@ body{
     }
 }
 
-@media screen and(max-width: 400px){
-    #photoBlock__animatedText{
-        width: 90%;
-        bottom: 0;
-    }
-
-    #photoBlock{
-        height: auto;
+@media screen and (max-width: 1024px){
+    #contentBlock{
+        flex-direction: column;
+        align-items: center;
     }
 }
