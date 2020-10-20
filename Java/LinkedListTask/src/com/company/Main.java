@@ -6,14 +6,20 @@ public class Main {
 
         // Linked List with add and print methods
 
-	    LinkedListISG<Integer> linkedListISG = new LinkedListISG<Integer>();
+//        LinkedListISG<Integer> linkedListInteger = new LinkedListISG<Integer>();
+//        linkedListInteger.add(1);
+//        linkedListInteger.add(2);
+//        linkedListInteger.add(3);
+//        linkedListInteger.print();
 
-        linkedListISG.add(1);
-        linkedListISG.add(2);
-        linkedListISG.add(3);
-        linkedListISG.add(4);
 
-        linkedListISG.print();
+        // Exception for imagible forbidden type
+	    ForbiddenType forbiddenType = new ForbiddenType();
+        LinkedListISG<ForbiddenType> linkedListISG = new LinkedListISG<ForbiddenType>();
+
+        linkedListISG.add(forbiddenType);    // try to add forbidden type
+
+//        linkedListISG.print();
 
     }
 }
