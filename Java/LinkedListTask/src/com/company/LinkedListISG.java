@@ -1,27 +1,49 @@
 package com.company;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class LinkedListISG<E>{
 
-    int size = 0;
-    Node<E> temp;
+    Node<E> head = new Node<E>(null, null, null);
 
     public void add(E value){
-        if(size == 0){
-            temp = new Node<E>(null ,value, null);
-            size++;
+        Node<E> node = new Node<E>(null, value, null);
+        if(head.item == null){
+            head = node;
         }else{
-            temp = new Node<E>(temp, value, null);
-            size++;
+            Node<E> temp = head;
+
+            while(temp.next != null){
+                temp = temp.next;
+            }
+
+            temp.next = node;
         }
     }
 
+//    public void add(E value, int index){
+//        int indexForValue = index;
+//        int indexHead = 0;
+//        Node<E> node = new Node<E>(null, value, null);
+//
+//        Node<E> temp = head;
+//
+//        while(indexHead != indexForValue){
+//
+//            indexHead++;
+//        }
+//
+//    }
+
     public void print(){
-        Node<E> tempPrint  = temp;
-        do{
-            System.out.println(tempPrint.item);
-            tempPrint = tempPrint.prev;
+        Node<E> temp = head;
+        while(temp.next != null) {
+            System.out.println(temp.item);
+            temp = temp.next;
         }
-        while(tempPrint != null);
+        System.out.println(temp.item);
+
     }
 
 }
