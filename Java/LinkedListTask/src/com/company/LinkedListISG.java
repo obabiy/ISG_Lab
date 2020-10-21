@@ -1,11 +1,15 @@
 package com.company;
 
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
 import java.util.LinkedList;
 import java.util.List;
 
 public class LinkedListISG<E>{
+    public Node<E> head;
 
-    Node<E> head;
+    @HeadLinkedListAnnotation
+    public E firstValue = null;
 
     {
         try {
@@ -21,12 +25,11 @@ public class LinkedListISG<E>{
             node = new Node<E>(null, value, null);
         } catch (NodeValueException e) {
             e.printStackTrace();
-        }finally {
-            System.out.println("Message from finally");
         }
 
         if (head.item == null) {
                 head = node;
+                firstValue = head.item;
             } else {
                 Node<E> temp = head;
 
@@ -39,19 +42,10 @@ public class LinkedListISG<E>{
 
     }
 
-//    public void add(E value, int index){
-//        int indexForValue = index;
-//        int indexHead = 0;
-//        Node<E> node = new Node<E>(null, value, null);
-//
-//        Node<E> temp = head;
-//
-//        while(indexHead != indexForValue){
-//
-//            indexHead++;
-//        }
-//
-//    }
+    @Deprecated
+    public void oldFunctionality(E value){
+        // some old code
+    }
 
     public void print(){
         Node<E> temp = head;
@@ -60,7 +54,19 @@ public class LinkedListISG<E>{
             temp = temp.next;
         }
         System.out.println(temp.item);
-
     }
+
+//    public void printNumbers(){
+//        Node<E> temp = head;
+//
+//        while(temp.next != null) {
+//            if(temp.item instanceof Number){
+//                @NumberAnnotation
+//
+//            }
+//        }
+//        System.out.println(temp.item);
+//
+//    }
 
 }
