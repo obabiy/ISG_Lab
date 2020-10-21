@@ -19,7 +19,9 @@ public class Main {
 
         linkedListISG.add(forbiddenType);    // try to add forbidden type
 
-//        linkedListISG.print();
-
+        /**
+         * comments for documentation
+         *
+         */
     }
 }
