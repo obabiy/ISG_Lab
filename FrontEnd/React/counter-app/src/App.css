@@ -1,0 +1,27 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+  height: 100vh;
+}
+
+.counterContainer{
+  font-size: 80px;
+  font-family: fantasy;
+}
+
+.buttonsContainer{
+  width: 100%;
+}
+
+.buttonsContainer > *{
+  margin-bottom: 5px;
+}

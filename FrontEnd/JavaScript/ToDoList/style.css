@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block{
+    width: 500px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+    border-radius: 4px;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+.block__list{
+    margin-bottom: 30px;
+}
+
+.block__form::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.block__form-input{
+    float: left;
+    display: block;
+    width: 70%;
+    height: 25px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+}
+
+.block__form-btn{
+    display: block;
+    float: right;
+    width: 15%;
+    line-height: 25px;
+    text-align: center;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+    background-color: purple;
+    border-radius: 3px;
+    color: white
+}
+
+.block__list-elem{
+    border-bottom: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: fantasy;
+    position: relative;
+}
+
+.block__list-elem:hover > .block__list-delete{
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+.block__list-delete{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: blue;
+    color: white;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+    cursor: pointer;
+    border-radius: 3px;
+    width: 15%;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0;
+    transition: opacity .3s ease;
+
+}
