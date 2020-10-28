@@ -1,0 +1,16 @@
+.app-container{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-family: 'Courier New', Courier, monospace;
+  padding-top: 60px;
+  color: #7D7F71;
+}
+
+.content{
+  width: 60vw;
+}

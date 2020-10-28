@@ -1,0 +1,18 @@
+.todo-card-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border: none;
+    background-color: #A68787;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#delete-btn{
+    width: 100px;
+    font-size: 52px;
+    color: black;
+}
