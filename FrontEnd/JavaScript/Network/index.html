@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        
+    
+    <div class="containerButtons">
+        <button class = 'btn' id = 'show-last-post'>Show last post</button>
+        <button class = 'btn' id = 'show-all-posts'>Show all posts</button>
+    </div>
+    <hr/>
+    <div class = 'content'>
+        <div class="newPost">
+            <input type = 'text' id = 'send-post-input' placeholder="Write a post"/>
+            <button id = 'send-post'>Send to the server</button>
+        </div>
+        <h2>Last post:</h2>
+        <div class = 'lastPost'>
+        </div>
+        <h2>All posts:</h2>
+        <div class="posts-container">
+            
+        </div>
     </div>
     
+    <script src="./script.js"></script>
 </body>
 </html>
