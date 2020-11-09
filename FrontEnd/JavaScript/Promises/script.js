@@ -4,7 +4,7 @@
 function makePromiseResolveWith3() {
   return new Promise((resolve, reject) => {
     resolve(3);
-  }).then((result) => console.log(result));
+  });
 }
 
 /**
@@ -13,7 +13,7 @@ function makePromiseResolveWith3() {
 function makePromiseRejectWithBoo() {
   let rejectPromise = new Promise((resolve, reject) => {
     reject("Boo");
-  }).catch((err) => console.log(err));
+  });
 }
 
 /**
@@ -22,9 +22,7 @@ function makePromiseRejectWithBoo() {
 function makePromiseWithConstructor(itShouldResolve) {
   return new Promise((resolve, reject) => {
     itShouldResolve ? resolve("Resolved") : reject("Rejected");
-  })
-    .then((result) => console.log(result))
-    .catch((err) => console.log(err));
+  });
 }
 
 /**
@@ -33,9 +31,25 @@ function makePromiseWithConstructor(itShouldResolve) {
 function makeDelayPromise(value, delayInMs) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Resolved value");
-    }, 1000);
-  }).then((res) => console.log(res));
+      resolve(value);
+    }, delayInMs);
+  });
+}
+
+/**
+ * Ex 1, Part 2
+ */
+
+function waitForPromise(promise, action) {
+  promise.finally(action);
+}
+
+/**
+ * Ex 2, Part 2
+ */
+
+function consumePromise(promise, consumer, handler) {
+  promise.finally((result) => consumer(handler(result)));
 }
 
 module.exports = {
@@ -43,27 +57,6 @@ module.exports = {
   makePromiseRejectWithBoo,
   makePromiseWithConstructor,
   makeDelayPromise,
+  waitForPromise,
+  consumePromise,
 };
-
-/**
- * Ex 1, Part 2
- */
-
-function waitForPromise(promise, action){
-    promise.then(action).catch(err => console.log(err))
-}
-
-/**
- * Ex 2, Part 2
- */
-
-function consumePromise(promise, consumer, handler){
-    promise.then(result => consumer(handler(result))).catch(err => console.log(err))
-}
-
-module.exports = {
-    waitForPromise,
-    consumePromise,
-};
-  
-  
